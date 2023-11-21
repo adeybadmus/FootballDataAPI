@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e68ac3a380704d69730011838abf30533a54f3e5
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25f2cfc8-a922-4de3-a48a-2272554619bf" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/pytest.ini.py" afterDir="false" />
+<<<<<<< HEAD
+=======
+  <component name="ChangeListManager">
+    <list default="true" id="25f2cfc8-a922-4de3-a48a-2272554619bf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+>>>>>>> 355b3961c0e141cc04b4771eb52b727c5d670f8a
+=======
+>>>>>>> e68ac3a380704d69730011838abf30533a54f3e5
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e68ac3a380704d69730011838abf30533a54f3e5
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -25,6 +41,12 @@
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
+<<<<<<< HEAD
+=======
+  <component name="Git.Settings">
+>>>>>>> 355b3961c0e141cc04b4771eb52b727c5d670f8a
+=======
+>>>>>>> e68ac3a380704d69730011838abf30533a54f3e5
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2YRLRTDZlREGlpnV2CZY245pknP" />
@@ -36,7 +58,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+=======
+>>>>>>> 355b3961c0e141cc04b4771eb52b727c5d670f8a
+=======
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+>>>>>>> e68ac3a380704d69730011838abf30533a54f3e5
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -49,6 +78,10 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e68ac3a380704d69730011838abf30533a54f3e5
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -60,4 +93,9 @@
       </map>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+>>>>>>> 355b3961c0e141cc04b4771eb52b727c5d670f8a
+=======
+>>>>>>> e68ac3a380704d69730011838abf30533a54f3e5
 </project>
