@@ -21,8 +21,7 @@ class PersonTests():
         authorization cookies. It then compares the response with the expected data.
         """
         # Set up the request parameters
-        person_id = '/44'
-        uri = person_uri + person_id
+        uri = f"{person_uri}/44"
 
         # Login to obtain cookies
         cookies = login()
@@ -34,6 +33,7 @@ class PersonTests():
         assert actual["name"] == expected_name
         assert actual["position"] == expected_position
 
+
     @mark.smoke
     def test_get_person_data_with_valid_authorization_extended(self, person_uri, valid_token):
         """
@@ -44,8 +44,7 @@ class PersonTests():
         including detailed information about the person.
         """
         # Set up the request parameters
-        person_id = '/44'
-        uri = person_uri + person_id
+        uri = f"{person_uri}/44"
 
         # Login to obtain cookies
         cookies = login()
@@ -99,6 +98,7 @@ class PersonTests():
 
         assert expected == actual
 
+
     def test_get_person_data_without_a_token(self, person_uri):
         """
         Test the retrieval of person data without a token.
@@ -108,8 +108,7 @@ class PersonTests():
         expected data.
         """
         # Set up the request parameters
-        person_id = '/44'
-        uri = person_uri + person_id
+        uri = f"{person_uri}/44"
 
         response = requests.get(uri)
         actual = response.json()
@@ -121,6 +120,7 @@ class PersonTests():
 
         assert expected == actual
 
+
     def test_get_person_data_with_an_invalid_token(self, person_uri, invalid_token):
         """
         Test the retrieval of person data with an invalid token.
@@ -129,9 +129,7 @@ class PersonTests():
         invalid header (token). It then compares the response with the expected data.
         """
         # Set up the request parameters
-        person_id = '/44'
-        uri = person_uri + person_id
-
+        uri = f"{person_uri}/44"
         response = requests.get(uri, headers=invalid_token)
         actual = response.json()
 

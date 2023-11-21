@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="37387d8f-5c99-4b7a-84ac-5fff91b29eb7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/resources/areas/test_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resources/areas/test_area.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/resources/competition/test_competition.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resources/competition/test_competition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/resources/matches/test_matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resources/matches/test_matches.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/resources/person/test_person.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resources/person/test_person.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="add_test_files" />
+        <entry key="$PROJECT_DIR$" value="add_documentation" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +53,7 @@
       <recent name="C:\Repos\Python\FootballDataAPI\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.person_tests">
+  <component name="RunManager" selected="Python tests.pytest for tests.resources.person.test_person.PersonTests.test_get_person_data_with_valid_authorization">
     <configuration name="test_area" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FootballDataAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,6 +169,22 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for tests.resources.person.test_person.PersonTests.test_get_person_data_with_valid_authorization" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="FootballDataAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\yinka\PycharmProjects\football-data-api\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.resources.person.test_person.PersonTests.test_get_person_data_with_valid_authorization&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in FootballDataAPI" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="FootballDataAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,6 +218,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.test_area" />
       <item itemvalue="Python tests.matches_tests" />
       <item itemvalue="Python tests.area_tests" />
       <item itemvalue="Python tests.person_tests" />
@@ -209,10 +226,11 @@
       <item itemvalue="Python tests.pytest in FootballDataAPI" />
       <item itemvalue="Python tests.pytest in test_area.py" />
       <item itemvalue="Python tests.all_test" />
-      <item itemvalue="Python.test_area" />
+      <item itemvalue="Python tests.pytest for tests.resources.person.test_person.PersonTests.test_get_person_data_with_valid_authorization" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for tests.resources.person.test_person.PersonTests.test_get_person_data_with_valid_authorization" />
         <item itemvalue="Python.test_area" />
         <item itemvalue="Python tests.all_test" />
       </list>
@@ -221,7 +239,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="25f2cfc8-a922-4de3-a48a-2272554619bf" name="Changes" comment="" />
+      <changelist id="37387d8f-5c99-4b7a-84ac-5fff91b29eb7" name="Changes" comment="" />
       <created>1700483438536</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
