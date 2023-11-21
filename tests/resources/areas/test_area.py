@@ -2,11 +2,11 @@ import requests
 from pytest import mark
 
 @mark.area
-class AreaTests():
+class AreaTests:
     """
     Test case for retrieving data related to areas.
 
-    This tests suite includes tests for:
+    This test suite includes tests for:
     1. Getting data for all areas
     2. Getting data for a single area
     3. Getting data for a single area without a token
@@ -17,7 +17,7 @@ class AreaTests():
         """
         Test the retrieval of data for all areas.
 
-        This tests sends a GET request to the '/v4/areas' endpoint and checks if
+        Sends a GET request to the '/v4/areas' endpoint and checks if
         the response status code is 200, indicating a successful request.
         """
         response = requests.get(area_uri, headers=valid_token)
@@ -28,7 +28,7 @@ class AreaTests():
         """
         Test the retrieval of data for a single area.
 
-        This tests sends a GET request to the '/v4/areas/2077' endpoint and checks
+        Sends a GET request to the '/v4/areas/2077' endpoint and checks
         if the response status code is 200, indicating a successful request.
         """
         area_id = "/2077"
@@ -41,8 +41,8 @@ class AreaTests():
         """
         Test the retrieval of data for a single area without a token.
 
-        This tests sends a GET request to the '/v4/areas/2077' endpoint without
-        providing an authentication token. It checks if the response status code
+        Sends a GET request to the '/v4/areas/2077' endpoint without
+        providing an authentication token. Checks if the response status code
         is 200, indicating a successful request.
         """
         area_id = "/2077"
@@ -54,8 +54,8 @@ class AreaTests():
         """
         Test the retrieval of data for a single area with an invalid token.
 
-        This tests sends a GET request to the '/v4/areas/2077' endpoint with an
-        invalid authentication token. It checks if the response status code is
+        Sends a GET request to the '/v4/areas/2077' endpoint with an
+        invalid authentication token. Checks if the response status code is
         400, indicating a bad request due to the invalid token.
         """
         area_id = "/2077"

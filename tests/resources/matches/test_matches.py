@@ -2,7 +2,7 @@ import requests
 from pytest import mark
 
 @mark.matches
-class MatchTests():
+class MatchTests:
     """
     Test case for retrieving match data.
 
@@ -19,9 +19,16 @@ class MatchTests():
         """
         Test the retrieval of match data for all competitions.
 
-        This tests sends a GET request to the '/v4/matches' endpoint with the provided
+        Sends a GET request to the '/v4/matches' endpoint with the provided
         header, and it checks if the response status code is 200, indicating a
         successful request.
+
+        Args:
+            match_uri (str): The base URI for the matches resource.
+            valid_token (dict): Valid authentication token.
+
+        Returns:
+            None
         """
 
         response = requests.get(match_uri, valid_token)
@@ -32,9 +39,15 @@ class MatchTests():
         """
         Test the retrieval of match data for all competitions without a token.
 
-        This tests sends a GET request to the '/v4/matches' endpoint without providing
-        valid authorization. It checks if the response status code is 200, indicating
+        Sends a GET request to the '/v4/matches' endpoint without providing
+        valid authorization. Checks if the response status code is 200, indicating
         successful access. Additionally, it asserts the response JSON structure.
+
+        Args:
+            match_uri (str): The base URI for the matches resource.
+
+        Returns:
+            None
         """
 
         response = requests.get(match_uri)
@@ -59,9 +72,16 @@ class MatchTests():
         """
         Test the retrieval of match data for all competitions with an invalid token.
 
-        This tests sends a GET request to the '/v4/matches' endpoint with an invalid
-        header (token). It checks if the response status code is 400, indicating a
+        Sends a GET request to the '/v4/matches' endpoint with an invalid
+        header (token). Checks if the response status code is 400, indicating a
         bad request due to the invalid token.
+
+        Args:
+            match_uri (str): The base URI for the matches resource.
+            invalid_token (dict): Invalid authentication token.
+
+        Returns:
+            None
         """
 
         response = requests.get(match_uri, headers=invalid_token)
@@ -77,9 +97,15 @@ class MatchTests():
         """
         Test the retrieval of match data for a single team without a token.
 
-        This tests sends a GET request to the '/v4/teams/759/matches' endpoint without
-        providing valid authorization. It checks if the response status code is 403,
+        Sends a GET request to the '/v4/teams/759/matches' endpoint without
+        providing valid authorization. Checks if the response status code is 403,
         indicating forbidden access.
+
+        Args:
+            match_uri (str): The base URI for the matches resource.
+
+        Returns:
+            None
         """
 
         response = requests.get(match_uri)
@@ -95,9 +121,16 @@ class MatchTests():
         """
         Test the retrieval of match data for a single team with an invalid token.
 
-        This tests sends a GET request to the '/v4/teams/759/matches' endpoint with an
-        invalid header (token). It checks if the response status code is 400, indicating
+        Sends a GET request to the '/v4/teams/759/matches' endpoint with an
+        invalid header (token). Checks if the response status code is 400, indicating
         a bad request due to the invalid token.
+
+        Args:
+            match_uri (str): The base URI for the matches resource.
+            invalid_token (dict): Invalid authentication token.
+
+        Returns:
+            None
         """
 
         response = requests.get(match_uri, headers=invalid_token)
@@ -113,9 +146,16 @@ class MatchTests():
         """
         Test the retrieval of match data for a single competition.
 
-        This tests sends a GET request to the '/v4/competitions/CL/matches' endpoint with
+        Sends a GET request to the '/v4/competitions/CL/matches' endpoint with
         the provided header, and it checks if the response status code is 200, indicating
         a successful request.
+
+        Args:
+            match_uri (str): The base URI for the matches resource.
+            valid_token (dict): Valid authentication token.
+
+        Returns:
+            None
         """
 
         response = requests.get(match_uri, headers=valid_token)

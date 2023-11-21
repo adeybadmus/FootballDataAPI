@@ -3,7 +3,7 @@ from pytest import mark
 
 
 @mark.competition
-class CompetitionsTests():
+class CompetitionsTests:
     """
     Test case for retrieving data related to competitions.
 
@@ -22,6 +22,13 @@ class CompetitionsTests():
 
         Sends a GET request to the '/v4/competitions' endpoint and checks if
         the response status code is 200, indicating a successful request.
+
+        Args:
+            competition_uri (str): The base URI for the competitions resource.
+            valid_token (dict): Valid authentication token.
+
+        Returns:
+            None
         """
         response = requests.get(competition_uri, headers=valid_token)
         print(response.text)
@@ -34,6 +41,14 @@ class CompetitionsTests():
         Sends a GET request to the '/v4/competitions' endpoint with valid
         authorization cookies. Checks if the response status code is 200,
         indicating a successful request.
+
+        Args:
+            competition_uri (str): The base URI for the competitions resource.
+            valid_token (dict): Valid authentication token.
+            login_with_valid_token (fixture): Fixture to obtain valid login cookies.
+
+        Returns:
+            None
         """
         cookies = login_with_valid_token
         response = requests.get(competition_uri, headers=valid_token, cookies=cookies)
@@ -48,6 +63,14 @@ class CompetitionsTests():
         Sends a GET request to the '/v4/competitions' endpoint with invalid
         authorization cookies. Checks if the response status code is 403,
         indicating forbidden access.
+
+        Args:
+            competition_uri (str): The base URI for the competitions resource.
+            invalid_token (dict): Invalid authentication token.
+            login_with_invalid_token (fixture): Fixture to obtain invalid login cookies.
+
+        Returns:
+            None
         """
         cookies = login_with_invalid_token
         response = requests.get(competition_uri, headers=invalid_token, cookies=cookies)
@@ -66,6 +89,12 @@ class CompetitionsTests():
         Sends a GET request to the '/v4/competitions/BSA' endpoint without
         providing valid authorization. Checks if the response status code is 403,
         indicating forbidden access.
+
+        Args:
+            competition_uri (str): The base URI for the competitions resource.
+
+        Returns:
+            None
         """
         competition_code = "/BSA"
         uri = competition_uri + competition_code
@@ -85,6 +114,14 @@ class CompetitionsTests():
         Sends a GET request to the '/v4/competitions/PL/standings' endpoint
         with valid authorization cookies. Checks if the response status code is 200,
         indicating a successful request.
+
+        Args:
+            competition_uri (str): The base URI for the competitions resource.
+            valid_token (dict): Valid authentication token.
+            login_with_valid_token (fixture): Fixture to obtain valid login cookies.
+
+        Returns:
+            None
         """
         standing_name = '/PL/standings'
         uri = competition_uri + standing_name
