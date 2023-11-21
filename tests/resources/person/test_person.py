@@ -1,11 +1,9 @@
 import requests
-from unittest import TestCase
-
-from config import BASE_URL, HEADER
-from login import login
+from pytest import mark
 
 
-class PersonTest(TestCase):
+@mark.person
+class PersonTests():
     """
     Test case for retrieving person data.
 
@@ -15,7 +13,7 @@ class PersonTest(TestCase):
     3. Getting person data with an invalid token
     """
 
-    def test_get_person_data(self):
+    def test_get_person_data_with_valid_authorization(self, person_uri, valid_token):
         """
         Test the retrieval of person data with valid authorization.
 
@@ -23,15 +21,36 @@ class PersonTest(TestCase):
         authorization cookies. It then compares the response with the expected data.
         """
         # Set up the request parameters
-        base_url = BASE_URL
-        resource = '/v4/persons/44'
-        header = HEADER
-        url = base_url + resource
+        person_id = '/44'
+        uri = person_uri + person_id
 
         # Login to obtain cookies
         cookies = login()
 
-        response = requests.get(url, headers=header, cookies=cookies)
+        response = requests.get(uri, headers=valid_token, cookies=cookies)
+        actual = response.json()
+        expected_name = "Cristiano"
+        expected_position = "Offence"
+        assert actual["name"] == expected_name
+        assert actual["position"] == expected_position
+
+    @mark.smoke
+    def test_get_person_data_with_valid_authorization_extended(self, person_uri, valid_token):
+        """
+        Test the retrieval of person data with valid authorization (extended).
+
+        This test makes a GET request to the '/v4/persons/44' endpoint with valid
+        authorization cookies. It then compares the response with the expected data,
+        including detailed information about the person.
+        """
+        # Set up the request parameters
+        person_id = '/44'
+        uri = person_uri + person_id
+
+        # Login to obtain cookies
+        cookies = login()
+
+        response = requests.get(uri, headers=valid_token, cookies=cookies)
         actual = response.json()
 
         expected = {
@@ -80,7 +99,7 @@ class PersonTest(TestCase):
 
         assert expected == actual
 
-    def test_get_person_data_without_a_token(self):
+    def test_get_person_data_without_a_token(self, person_uri):
         """
         Test the retrieval of person data without a token.
 
@@ -89,11 +108,10 @@ class PersonTest(TestCase):
         expected data.
         """
         # Set up the request parameters
-        base_url = BASE_URL
-        resource = '/v4/persons/44'
-        url = base_url + resource
+        person_id = '/44'
+        uri = person_uri + person_id
 
-        response = requests.get(url)
+        response = requests.get(uri)
         actual = response.json()
 
         expected = {
@@ -103,7 +121,7 @@ class PersonTest(TestCase):
 
         assert expected == actual
 
-    def test_get_person_data_with_an_invalid_token(self):
+    def test_get_person_data_with_an_invalid_token(self, person_uri, invalid_token):
         """
         Test the retrieval of person data with an invalid token.
 
@@ -111,12 +129,10 @@ class PersonTest(TestCase):
         invalid header (token). It then compares the response with the expected data.
         """
         # Set up the request parameters
-        base_url = BASE_URL
-        resource = '/v4/persons/44'
-        url = base_url + resource
-        invalid_token = {'X-Auth-Token': '55673hhjjjjkjkdd'}
+        person_id = '/44'
+        uri = person_uri + person_id
 
-        response = requests.get(url, headers=invalid_token)
+        response = requests.get(uri, headers=invalid_token)
         actual = response.json()
 
         expected = {
