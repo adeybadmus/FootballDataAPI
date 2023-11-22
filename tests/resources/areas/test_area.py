@@ -2,7 +2,7 @@ import requests
 from pytest import mark
 
 @mark.area
-class AreaTests:
+class AreaTests():
     """
     Test case for retrieving data related to areas.
 

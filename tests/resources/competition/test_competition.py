@@ -1,9 +1,8 @@
 import requests
 from pytest import mark
 
-
 @mark.competition
-class CompetitionsTests:
+class CompetitionsTests():
     """
     Test case for retrieving data related to competitions.
 
@@ -96,8 +95,7 @@ class CompetitionsTests:
         Returns:
             None
         """
-        competition_code = "/BSA"
-        uri = competition_uri + competition_code
+        uri = f"{competition_uri}/BSA"
         response = requests.get(uri)
         print(response.text)
         actual = response.json()
@@ -124,7 +122,7 @@ class CompetitionsTests:
             None
         """
         standing_name = '/PL/standings'
-        uri = competition_uri + standing_name
+        uri = f"{competition_uri}/PL/standing"
         cookies = login_with_valid_token
         response = requests.get(uri, headers=valid_token, cookies=cookies)
         print(response.text)

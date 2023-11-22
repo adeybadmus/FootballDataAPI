@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37387d8f-5c99-4b7a-84ac-5fff91b29eb7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/FootballDataAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FootballDataAPI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/resources/areas/test_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resources/areas/test_area.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/resources/competition/test_competition.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resources/competition/test_competition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/resources/matches/test_matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resources/matches/test_matches.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="add_test_files" />
+        <entry key="$PROJECT_DIR$" value="add_documentation" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,8 +42,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/resources/areas/test_area.py" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/resources" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -53,8 +54,8 @@
       <recent name="C:\Repos\Python\FootballDataAPI\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.person_tests">
-    <configuration name="test_area" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.all_test">
+    <configuration name="areas_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FootballDataAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,6 +63,27 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\yinka\PycharmProjects\football-data-api\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/resources/areas" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/resources/areas" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_area" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FootballDataAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\yinka\OneDrive\MABY Consultancy\Test Analysis\Python\Python_Class_Repo\restful-api-tests-demo\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/resources/areas" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -169,6 +191,38 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for tests.resources" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="FootballDataAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\yinka\PycharmProjects\football-data-api\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.resources&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests.resources.competition.test_competition.CompetitionsTests.test_get_all_competitions_data" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="FootballDataAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\yinka\PycharmProjects\football-data-api\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.resources.competition.test_competition.CompetitionsTests.test_get_all_competitions_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in FootballDataAPI" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="FootballDataAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,27 +255,50 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="resources_tests" type="tests" factoryName="py.test">
+      <module name="FootballDataAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/resources&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Python.areas_tests" />
+      <item itemvalue="Python.test_area" />
       <item itemvalue="Python tests.matches_tests" />
       <item itemvalue="Python tests.area_tests" />
       <item itemvalue="Python tests.person_tests" />
       <item itemvalue="Python tests.competition_tests" />
       <item itemvalue="Python tests.pytest in FootballDataAPI" />
+      <item itemvalue="Python tests.resources_tests" />
       <item itemvalue="Python tests.pytest in test_area.py" />
       <item itemvalue="Python tests.all_test" />
-      <item itemvalue="Python.test_area" />
+      <item itemvalue="Python tests.pytest for tests.resources.competition.test_competition.CompetitionsTests.test_get_all_competitions_data" />
+      <item itemvalue="Python tests.pytest for tests.resources" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_area" />
         <item itemvalue="Python tests.all_test" />
+        <item itemvalue="Python tests.pytest for tests.resources" />
+        <item itemvalue="Python tests.pytest for tests.resources.competition.test_competition.CompetitionsTests.test_get_all_competitions_data" />
+        <item itemvalue="Python.test_area" />
+        <item itemvalue="Python.areas_tests" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="25f2cfc8-a922-4de3-a48a-2272554619bf" name="Changes" comment="" />
+      <changelist id="37387d8f-5c99-4b7a-84ac-5fff91b29eb7" name="Changes" comment="" />
       <created>1700483438536</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
