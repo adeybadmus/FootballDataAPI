@@ -4,7 +4,7 @@
 
 This project is a football data APA Test framework written in Python showing how to get information from a secured web server using an API key. 
 
-Every part of this project is a sample code that gets information about matches, teams, players, and competitions. It utilizes the [Football API](https://example.com/football-api) to fetch and display data related to football events.
+Every part of this project is a sample code that gets information about matches, teams, players, and competitions. It utilizes the [Football API](https://api.football-data.org/v4) to fetch and display data related to football events.
 
 ## Features
 
@@ -32,13 +32,18 @@ To use the Football API, you need to obtain an API key from [Football Data Org](
 2. Run the application:
 
 ## Configuration
-Update the config.py file with your API key and other configuration settings.
+Update the configuration file or environment variables with the required values before running the tests. Configuration details can be found in config.py.
 
 ### config.py
 
 BASE_URL = "https://www.football-data.org"
 HEADER = {'X-Auth-Token': 'your-api-key'}
 
-## Contributing or Found a bug?
+## Contributing
+If you'd like to contribute to this project, please follow these guidelines:
 
-if you found an issue or would like to submit an improvement  please submit an issue using the issues tab above. If you would like to submit a PR with a fix, making reference to teh issue you created.
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Implement your changes.
+Write test cases for new functionality.
+Open a pull request.
