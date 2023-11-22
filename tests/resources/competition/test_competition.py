@@ -2,7 +2,7 @@ import requests
 from pytest import mark
 
 @mark.competition
-class CompetitionsTests:
+class CompetitionsTests():
     """
     Test case for retrieving data related to competitions.
 
