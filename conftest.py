@@ -6,6 +6,13 @@ uri = "https://api.football-data.org/v4"
 
 
 @fixture(scope='function', autouse=True)
+def base_uri():
+    """
+    Fixture to provide the URI for the persons resource.
+    """
+    return uri
+
+@fixture(scope='function', autouse=True)
 def person_uri():
     """
     Fixture to provide the URI for the persons resource.

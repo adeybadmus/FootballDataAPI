@@ -61,5 +61,4 @@ class AreaTests():
         area_id = "/2077"
         uri = area_uri + area_id
         response = requests.get(uri, headers=invalid_token)
-        print(response.text)
         assert response.status_code == 400
