@@ -15,7 +15,7 @@ class MatchTests:
     6. Getting match data for a single competition
     """
 
-    def test_get_match_data_for_a_competition(self, match_uri, valid_token):
+    def test_get_match_across_a_set_of_competition_with_a_valid_token(self, match_uri, valid_token, login_with_valid_token):
         """
         Test the retrieval of match data for all competitions.
 
@@ -30,11 +30,21 @@ class MatchTests:
         Returns:
             None
         """
-
-        response = requests.get(match_uri, valid_token)
-        print(response.text)
+        cookies = login_with_valid_token
+        response = requests.get(match_uri, headers=valid_token, cookies=cookies)
         assert response.status_code == 200
+        actual = response.json()
+        assert actual["resultSet"]["competitions"] == "BSA,PL,PD,SA,BL1,ELC,DED,FL1"
+        assert actual["matches"][0]["competition"]["code"] == "BSA"
+        assert actual["matches"][1]["competition"]["code"] == "PL"
+        assert actual["matches"][2]["competition"]["code"] == "PD"
+        assert actual["matches"][3]["competition"]["code"] == "SA"
+        assert actual["matches"][4]["competition"]["code"] == "BL1"
+        assert actual["matches"][5]["competition"]["code"] == "ELC"
+        assert actual["matches"][6]["competition"]["code"] == "DED"
+        assert actual["matches"][7]["competition"]["code"] == "FL1"
 
+    @mark.mar
     def test_get_match_data_for_a_competition_without_a_token(self,  match_uri):
         """
         Test the retrieval of match data for all competitions without a token.
@@ -54,25 +64,15 @@ class MatchTests:
         assert response.status_code == 200
 
         actual = response.json()
-        expected = {
-            "filters": {
-                "dateFrom": "2023-11-19",
-                "dateTo": "2023-11-20",
-                "permission": None
-            },
-            "resultSet": {
-                "count": 0
-            },
-            "matches": []
-        }
 
-        assert expected == actual
+        assert actual["resultSet"]["count"] == 0
+        assert actual["matches"] == []
 
-    def test_gets_match_data_for_a_competition_with_an_invalid_token(self, match_uri, invalid_token):
+    def test_gets_match_data_for_a_competition_with_an_invalid_token(self, competition_uri, invalid_token):
         """
         Test the retrieval of match data for all competitions with an invalid token.
 
-        Sends a GET request to the '/v4/matches' endpoint with an invalid
+        Sends a GET request to the 'competitions/2003/matches?matchday=1' endpoint with an invalid
         header (token). Checks if the response status code is 400, indicating a
         bad request due to the invalid token.
 
@@ -83,8 +83,8 @@ class MatchTests:
         Returns:
             None
         """
-
-        response = requests.get(match_uri, headers=invalid_token)
+        uri = f"{competition_uri}/2003/matches?matchday=1"
+        response = requests.get(uri, headers=invalid_token)
         actual = response.json()
 
         expected = {
@@ -93,7 +93,7 @@ class MatchTests:
         }
         assert expected == actual
 
-    def test_get_match_data_for_a_single_team_without_a_token(self, match_uri):
+    def test_get_match_data_for_a_particluar_team_without_a_token(self, base_uri):
         """
         Test the retrieval of match data for a single team without a token.
 
@@ -107,8 +107,8 @@ class MatchTests:
         Returns:
             None
         """
-
-        response = requests.get(match_uri)
+        uri = f"{base_uri}/teams/759/matches"
+        response = requests.get(uri)
         actual = response.json()
 
         expected = {
@@ -117,7 +117,7 @@ class MatchTests:
         }
         assert expected == actual
 
-    def test_get_match_data_for_a_single_team_with_an_invalid_token(self, match_uri, invalid_token):
+    def test_get_match_data_for_a_particular_team_with_an_invalid_token(self, base_uri, invalid_token):
         """
         Test the retrieval of match data for a single team with an invalid token.
 
@@ -132,8 +132,8 @@ class MatchTests:
         Returns:
             None
         """
-
-        response = requests.get(match_uri, headers=invalid_token)
+        uri = f"{base_uri}/teams/759/matches"
+        response = requests.get(uri, headers=invalid_token)
         actual = response.json()
 
         expected = {
@@ -142,11 +142,11 @@ class MatchTests:
         }
         assert expected == actual
 
-    def test_get_a_single_competitions_match_data(self, match_uri, valid_token):
+    def test_get_match_for_a_particular_competition(self, competition_uri, valid_token):
         """
         Test the retrieval of match data for a single competition.
 
-        Sends a GET request to the '/v4/competitions/CL/matches' endpoint with
+        Sends a GET request to the '/v4/competitions/2003/matches?matchday=1' endpoint with
         the provided header, and it checks if the response status code is 200, indicating
         a successful request.
 
@@ -157,7 +157,12 @@ class MatchTests:
         Returns:
             None
         """
-
-        response = requests.get(match_uri, headers=valid_token)
-        print(response.text)
+        uri = f"{competition_uri}/2003/matches?matchday=1"
+        response = requests.get(uri, headers=valid_token)
         assert response.status_code == 200
+        actual = response.json()
+
+        assert actual["filters"]["season"] == 2023
+        assert actual["resultSet"]["played"] == 9
+        assert actual["competition"]["id"] == 2003
+

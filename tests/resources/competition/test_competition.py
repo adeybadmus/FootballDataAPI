@@ -30,8 +30,15 @@ class CompetitionsTests():
             None
         """
         response = requests.get(competition_uri, headers=valid_token)
-        print(response.text)
         assert response.status_code == 200
+        actual = response.json()
+
+        assert actual["competitions"][0]["id"] == 2013
+        assert actual["competitions"][0]["area"]["name"] == "Brazil"
+
+        assert actual["competitions"][1]["id"] == 2016
+        assert actual["competitions"][1]["area"]["name"] == "England"
+
 
     def test_get_a_single_competition_data(self, competition_uri, valid_token, login_with_valid_token):
         """
@@ -50,9 +57,12 @@ class CompetitionsTests():
             None
         """
         cookies = login_with_valid_token
-        response = requests.get(competition_uri, headers=valid_token, cookies=cookies)
-        print(response.text)
+        uri = f"{competition_uri}/BSA"
+        response = requests.get(uri, headers=valid_token, cookies=cookies)
         assert response.status_code == 200
+        actual = response.json()
+        assert actual["id"] == 2013
+        assert actual["name"] == "Campeonato Brasileiro Série A"
 
     def test_get_a_single_competition_data_with_an_invalid_token(self, competition_uri, invalid_token,
                                                                  login_with_invalid_token):
@@ -121,9 +131,12 @@ class CompetitionsTests():
         Returns:
             None
         """
-        standing_name = '/PL/standings'
-        uri = f"{competition_uri}/PL/standing"
+        uri = f"{competition_uri}/PL/standings"
         cookies = login_with_valid_token
         response = requests.get(uri, headers=valid_token, cookies=cookies)
-        print(response.text)
         assert response.status_code == 200
+        actual = response.json()
+        assert actual["area"]["id"] == 2072
+        assert actual["competition"]["id"] == 2021
+        assert actual["season"]["id"] == 1564
+        assert actual["standings"][0]["stage"] == "REGULAR_SEASON"
